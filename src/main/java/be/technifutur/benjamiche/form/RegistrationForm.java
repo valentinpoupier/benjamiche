@@ -24,13 +24,16 @@ public class RegistrationForm {
     @NotNull
     private String lastName;
 
+    @NotNull
+    private Set<String> roles;
+
     public User toUser() {
         User user = new User();
         user.setUsername(username);
         user.setPassword(password);
         user.setFirstName(firstName);
         user.setLastName(lastName);
-        user.setRoles(Set.of("ROLE_USER"));
+        user.setRoles(roles);
         return user;
     }
 }

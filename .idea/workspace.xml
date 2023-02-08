@@ -5,43 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f647a57-c565-49d6-937d-605ed981d35b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/controller/ControllerAdvisor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/controller/SandwichController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/exceptions/FormValidationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/exceptions/NoAvailablePlaneException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/exceptions/ReferencedResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/exceptions/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/form/LoginForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/form/PanierForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/form/RegistrationForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/form/SandwichForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/jwt/JWTAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/jwt/JWTHolderDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/jwt/JwtProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/dto/ErrorDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/dto/SandwichDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/entity/Commande.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/entity/Diet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/entity/Ingredient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/entity/Panier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/entity/Sandwich.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/repository/DietRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/repository/IngredientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/repository/SandwichRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/SandwichService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/impl/AuthServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/impl/SandwichServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/utils/DataInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/form/PanierForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/form/PanierForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/form/RegistrationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/form/RegistrationForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/dto/SandwichDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/dto/SandwichDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/entity/Panier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/entity/Panier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,13 +41,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/studentjava02/Documents/timairport"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/studentjava02/Documents/timairport&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\studentjava02\Documents\benjamiche\src\main\java\be\technifutur\benjamiche" />

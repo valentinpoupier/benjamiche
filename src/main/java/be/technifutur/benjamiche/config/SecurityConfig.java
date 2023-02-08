@@ -38,6 +38,8 @@ public class SecurityConfig {
         http.authorizeHttpRequests((authorize) -> {
             authorize
                     .requestMatchers("/auth/*").anonymous()
+                    .requestMatchers(HttpMethod.POST, "/sandwich/create").hasRole("ADMIN")
+                    .requestMatchers(HttpMethod.GET, "/sandwich/*").hasRole("USER")
                     .anyRequest().permitAll();
         });
 

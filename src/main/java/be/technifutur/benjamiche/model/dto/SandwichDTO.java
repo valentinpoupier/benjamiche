@@ -17,7 +17,7 @@ public class SandwichDTO {
     private String description;
     private double price;
     private Diet diet;
-    private Set<Ingredient> ingredients = new LinkedHashSet<>();
+    private Set<Ingredient> ingredients;
 
     @Data
     @Builder

@@ -19,6 +19,8 @@ public class Panier {
     @OneToMany
     private Set<Sandwich> sandwiches = new HashSet<>();
 
+    private double total;
+
     @OneToOne(mappedBy = "panier")
     private User user;
 
