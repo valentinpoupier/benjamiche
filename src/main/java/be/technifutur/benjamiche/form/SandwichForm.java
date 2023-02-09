@@ -1,7 +1,5 @@
 package be.technifutur.benjamiche.form;
 
-import be.technifutur.benjamiche.exceptions.ResourceNotFoundException;
-import be.technifutur.benjamiche.model.entity.Ingredient;
 import be.technifutur.benjamiche.model.entity.Sandwich;
 import be.technifutur.benjamiche.repository.DietRepository;
 import be.technifutur.benjamiche.repository.IngredientRepository;

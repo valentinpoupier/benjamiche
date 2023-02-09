@@ -4,23 +4,24 @@ import be.technifutur.benjamiche.model.entity.Panier;
 import be.technifutur.benjamiche.model.entity.Sandwich;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-import java.util.Map;
+import java.util.LinkedList;
 
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 public class PanierForm {
-
-    private Map<Sandwich,Integer> sandwiches;
+    private long sandwichId;
+    private int quantity;
 
     public Panier toEntity(){
         Panier panier = new Panier();
-        panier.setSandwiches( this.sandwiches.keySet() );
-        panier.setTotal( this.sandwiches.keySet().stream().mapToDouble( Sandwich::getPrice ).sum() );
+        Sandwich sandwich = new Sandwich();
+        sandwich.setId( this.sandwichId );
+        LinkedList<Sandwich> sandwiches = new LinkedList<>();
+        sandwiches.add(sandwich);
+        panier.setSandwiches(sandwiches);
+        panier.setTotal(panier.getTotal() + sandwich.getPrice() * this.quantity);
         return panier;
     }
-
 }

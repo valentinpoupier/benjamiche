@@ -30,11 +30,6 @@ public class Sandwich {
     private Diet diet;
 
     @ManyToMany
-@JoinTable(
-            name = "sandwich_ingredient",
-            joinColumns = @JoinColumn(name = "sandwich_id"),
-            inverseJoinColumns = @JoinColumn(name = "ingredient_id")
-    )
     private Set<Ingredient> ingredients = new LinkedHashSet<>();
 
 }

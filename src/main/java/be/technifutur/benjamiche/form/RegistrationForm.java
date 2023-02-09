@@ -1,5 +1,6 @@
 package be.technifutur.benjamiche.form;
 
+import be.technifutur.benjamiche.model.entity.Panier;
 import be.technifutur.benjamiche.model.entity.User;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -15,7 +16,7 @@ public class RegistrationForm {
     @Pattern(regexp = "^(.+)@(.+)$")
     private String username;
     @NotNull
-    @Size(min=4)
+    @Size(min = 4)
     private String password;
 
     @NotNull
@@ -27,6 +28,8 @@ public class RegistrationForm {
     @NotNull
     private Set<String> roles;
 
+    private Panier panier = new Panier();
+
     public User toUser() {
         User user = new User();
         user.setUsername(username);
@@ -34,6 +37,8 @@ public class RegistrationForm {
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setRoles(roles);
+        user.setPanier(panier);
+
         return user;
     }
 }

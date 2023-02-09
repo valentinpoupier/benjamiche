@@ -6,9 +6,7 @@ import be.technifutur.benjamiche.model.dto.SandwichDTO;
 import be.technifutur.benjamiche.model.entity.Diet;
 import be.technifutur.benjamiche.model.entity.Ingredient;
 import be.technifutur.benjamiche.model.entity.Sandwich;
-import be.technifutur.benjamiche.repository.DietRepository;
-import be.technifutur.benjamiche.repository.IngredientRepository;
-import be.technifutur.benjamiche.repository.SandwichRepository;
+import be.technifutur.benjamiche.repository.*;
 import be.technifutur.benjamiche.service.SandwichService;
 import org.springframework.stereotype.Service;
 
@@ -23,10 +21,12 @@ public class SandwichServiceImpl implements SandwichService {
 
     private final IngredientRepository ingredientRepository;
 
+
     public SandwichServiceImpl(SandwichRepository sandwichRepository, DietRepository dietRepository, IngredientRepository ingredientRepository) {
         this.sandwichRepository = sandwichRepository;
         this.dietRepository = dietRepository;
         this.ingredientRepository = ingredientRepository;
+
     }
 
     @Override
@@ -57,6 +57,5 @@ public class SandwichServiceImpl implements SandwichService {
                 .map(SandwichDTO::from)
                 .toList();
     }
-
 
 }

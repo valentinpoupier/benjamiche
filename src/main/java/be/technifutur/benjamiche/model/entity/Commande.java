@@ -4,8 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Getter @Setter
@@ -33,5 +32,5 @@ public class Commande {
     private User user;
 
     @OneToMany
-    private Set<Sandwich> sandwiches = new HashSet<>();
+    private List<Sandwich> sandwiches = new ArrayList<>();
 }

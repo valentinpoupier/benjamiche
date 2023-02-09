@@ -4,8 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter @Setter
@@ -17,9 +17,15 @@ public class Panier {
     private long id;
 
     @OneToMany
-    private Set<Sandwich> sandwiches = new HashSet<>();
+    @JoinTable(
+            name = "panier_sandwich",
+            joinColumns = @JoinColumn(name = "panier_id"),
+            inverseJoinColumns = @JoinColumn(name = "sandwich_id")
+    )
+    @JoinColumn(name = "sandwich_id")
+    private List<Sandwich> sandwiches = new ArrayList<>();
 
-    private double total;
+    private double total = 0;
 
     @OneToOne(mappedBy = "panier")
     private User user;

@@ -2,6 +2,7 @@ package be.technifutur.benjamiche.service;
 
 import be.technifutur.benjamiche.form.SandwichForm;
 import be.technifutur.benjamiche.model.dto.SandwichDTO;
+import be.technifutur.benjamiche.model.entity.User;
 
 import java.util.List;
 

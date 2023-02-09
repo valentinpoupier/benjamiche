@@ -5,7 +5,9 @@ import be.technifutur.benjamiche.form.LoginForm;
 import be.technifutur.benjamiche.form.RegistrationForm;
 import be.technifutur.benjamiche.jwt.JWTHolderDTO;
 import be.technifutur.benjamiche.jwt.JwtProvider;
+import be.technifutur.benjamiche.model.entity.Panier;
 import be.technifutur.benjamiche.model.entity.User;
+import be.technifutur.benjamiche.repository.PanierRepository;
 import be.technifutur.benjamiche.repository.UserRepository;
 import be.technifutur.benjamiche.service.AuthService;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -21,11 +23,14 @@ public class AuthServiceImpl implements AuthService {
     private final AuthenticationManager authManager;
     private final JwtProvider jwtProvider;
 
-    public AuthServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder, AuthenticationManager authManager, JwtProvider jwtProvider) {
+    private final PanierRepository panierRepository;
+
+    public AuthServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder, AuthenticationManager authManager, JwtProvider jwtProvider, PanierRepository panierRepository) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.authManager = authManager;
         this.jwtProvider = jwtProvider;
+        this.panierRepository = panierRepository;
     }
 
     @Override
@@ -34,6 +39,9 @@ public class AuthServiceImpl implements AuthService {
             throw new FormValidationException("Username already exists");
         }
         User user = form.toUser();
+        Panier panier = new Panier();
+        panierRepository.save(panier);
+        user.setPanier(panier);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         userRepository.save(user);
