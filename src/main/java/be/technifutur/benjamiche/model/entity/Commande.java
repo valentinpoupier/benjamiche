@@ -18,7 +18,7 @@ public class Commande {
     @Column(name = "order_date", nullable = false)
     private LocalDateTime date;
 
-    @Column(name="delivery_date", nullable = false)
+    @Column(name = "delivery_date")
     private LocalDateTime deliveryDate;
 
     @Column(name="discount", nullable = false)
@@ -27,10 +27,18 @@ public class Commande {
     @Column(name="state", nullable = false)
     private String state;
 
+    @Column(name="total", nullable = false)
+    private double total;
+
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @OneToMany
+    @JoinTable(
+            name = "order_sandwich",
+            joinColumns = @JoinColumn(name = "order_id"),
+            inverseJoinColumns = @JoinColumn(name = "sandwich_id")
+    )
     private List<Sandwich> sandwiches = new ArrayList<>();
 }

@@ -1,15 +1,14 @@
 package be.technifutur.benjamiche.utils;
 
-import be.technifutur.benjamiche.model.entity.Diet;
-import be.technifutur.benjamiche.model.entity.Ingredient;
-import be.technifutur.benjamiche.model.entity.Sandwich;
-import be.technifutur.benjamiche.repository.DietRepository;
-import be.technifutur.benjamiche.repository.IngredientRepository;
-import be.technifutur.benjamiche.repository.SandwichRepository;
+import be.technifutur.benjamiche.model.entity.*;
+import be.technifutur.benjamiche.repository.*;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 
 @Component
 public class DataInit implements InitializingBean {
@@ -19,10 +18,16 @@ public class DataInit implements InitializingBean {
 
     private final IngredientRepository ingredientRepository;
 
-    public DataInit(SandwichRepository sandwichRepository, DietRepository dietRepository, IngredientRepository ingredientRepository) {
+    private final PanierRepository panierRepository;
+
+    private final UserRepository userRepository;
+
+    public DataInit(SandwichRepository sandwichRepository, DietRepository dietRepository, IngredientRepository ingredientRepository, PanierRepository panierRepository, UserRepository userRepository) {
         this.sandwichRepository = sandwichRepository;
         this.dietRepository = dietRepository;
         this.ingredientRepository = ingredientRepository;
+        this.panierRepository = panierRepository;
+        this.userRepository = userRepository;
     }
 
     @Override
@@ -244,5 +249,33 @@ public class DataInit implements InitializingBean {
         sandwich8.setDiet(diet3);
         sandwich8 = sandwichRepository.save(sandwich8);
 
+        //---------------------------------------------
+//        // User
+//
+//        User user1 = new User();
+//        user1.setFirstName("John");
+//        user1.setLastName("Doe");
+//        user1.setUsername("uuu@ppp.pp");
+//        user1.setPassword("pppp");
+//        user1.setRoles(new HashSet<>(Arrays.asList("ROLE_USER")));
+//        userRepository.save(user1);
+//
+//        //---------------------------------------------
+//        // panier
+//
+//        Panier panier1 = new Panier();
+//        panier1.setSandwiches(new ArrayList<>(Arrays.asList(sandwich1, sandwich2, sandwich3)));
+//        panier1.setTotal(panier1.getSandwiches().stream().map(Sandwich::getPrice).reduce(0.0, Double::sum));
+//        panier1.setUser(user1);
+//        user1.setPanier(panier1);
+//        panierRepository.save(panier1);
+//        userRepository.save(user1);
+//
+//        // add sandwich to panier
+//        List<Sandwich> sandwiches = panier1.getSandwiches();
+//        sandwiches.add(sandwich4);
+//        panier1.setSandwiches(sandwiches);
+//        panier1.setTotal(panier1.getSandwiches().stream().map(Sandwich::getPrice).reduce(0.0, Double::sum));
+//        panierRepository.save(panier1);
     }
 }

@@ -14,4 +14,8 @@ public interface SandwichService {
 
     List<SandwichDTO> getAll();
 
+    void updateSandwich(SandwichForm form, long sandwichId);
+
+    void deleteSandwich(long sandwichId);
+
 }

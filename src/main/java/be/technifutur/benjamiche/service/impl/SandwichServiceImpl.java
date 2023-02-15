@@ -6,6 +6,7 @@ import be.technifutur.benjamiche.model.dto.SandwichDTO;
 import be.technifutur.benjamiche.model.entity.Diet;
 import be.technifutur.benjamiche.model.entity.Ingredient;
 import be.technifutur.benjamiche.model.entity.Sandwich;
+import be.technifutur.benjamiche.model.entity.User;
 import be.technifutur.benjamiche.repository.*;
 import be.technifutur.benjamiche.service.SandwichService;
 import org.springframework.stereotype.Service;
@@ -56,6 +57,23 @@ public class SandwichServiceImpl implements SandwichService {
         return sandwichRepository.findAll().stream()
                 .map(SandwichDTO::from)
                 .toList();
+    }
+
+    @Override
+    public void updateSandwich(SandwichForm form, long sandwichId) {
+        Sandwich sandwich = sandwichRepository.findById(sandwichId)
+                .orElseThrow(ResourceNotFoundException::new);
+        sandwich.setDiet(form.toEntity().getDiet());
+        sandwich.setIngredients(form.toEntity().getIngredients());
+        sandwich.setName(form.getName());
+        sandwich.setDescription(form.getDescription());
+        sandwich.setPrice(form.getPrice());
+        sandwichRepository.save(sandwich);
+    }
+
+    @Override
+    public void deleteSandwich(long sandwichId) {
+        sandwichRepository.deleteById(sandwichId);
     }
 
 }

@@ -22,8 +22,9 @@ public class Panier {
             joinColumns = @JoinColumn(name = "panier_id"),
             inverseJoinColumns = @JoinColumn(name = "sandwich_id")
     )
-    @JoinColumn(name = "sandwich_id")
     private List<Sandwich> sandwiches = new ArrayList<>();
+
+    private int quantity = 0;
 
     private double total = 0;
 

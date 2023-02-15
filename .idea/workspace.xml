@@ -4,24 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f647a57-c565-49d6-937d-605ed981d35b" name="Changes" comment="finalisation de la db et creation de CRUD">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/dto/PanierDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/repository/PanierRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/PanierService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/impl/PanierServiceImpl.java" afterDir="false" />
+    <list default="true" id="6f647a57-c565-49d6-937d-605ed981d35b" name="Changes" comment="add sandwich in panier">
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/controller/CommandeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/controller/PanierController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/dto/CommandeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/repository/CommandeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/CommandeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/impl/CommandeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/controller/SandwichController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/controller/SandwichController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/form/PanierForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/form/PanierForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/form/RegistrationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/form/RegistrationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/form/SandwichForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/form/SandwichForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/entity/Commande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/entity/Commande.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/entity/Panier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/entity/Panier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/entity/Sandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/model/entity/Sandwich.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/repository/PanierRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/repository/PanierRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/PanierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/PanierService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/SandwichService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/SandwichService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/impl/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/impl/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/impl/PanierServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/impl/PanierServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/impl/SandwichServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/impl/SandwichServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/utils/DataInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/technifutur/benjamiche/utils/DataInit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675927937186</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add sandwich in panier">
+      <created>1675956836060</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675956836060</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +136,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finalisation de la db et creation de CRUD" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalisation de la db et creation de CRUD" />
+    <MESSAGE value="add sandwich in panier" />
+    <option name="LAST_COMMIT_MESSAGE" value="add sandwich in panier" />
   </component>
 </project>

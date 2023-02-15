@@ -6,10 +6,13 @@ import org.springframework.security.core.Authentication;
 
 public interface PanierService {
 
-    void addSandwichToPanier(long idSand, PanierForm panierForm, Authentication authentication);
+    void addSandwichToPanier(PanierForm panierForm, Authentication authentication);
 
     void removeSandwichFromPanier(long sandwichId, int quantity);
 
-    PanierDTO getPanier();
+    PanierDTO getPanier(Authentication authentication);
+
+    void validatePanier(Authentication authentication);
+
 
 }

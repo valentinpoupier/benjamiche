@@ -10,8 +10,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 public interface PanierRepository extends JpaRepository<Panier, Long> {
-    @Transactional
+    // add sandwich in panier by id
     @Modifying
-    @Query("update Panier p set p.sandwiches = ?1, p.total = ?2 where p.id = ?3")
-    int updateSandwichesAndQuantityAndTotalById(List<Sandwich> sandwiches, double total, long id);
+    @Transactional
+    @Query("UPDATE Panier p SET p.sandwiches = ?2 WHERE p.id = ?1")
+    void updateSandwiches(long id, List<Sandwich> sandwiches);
 }

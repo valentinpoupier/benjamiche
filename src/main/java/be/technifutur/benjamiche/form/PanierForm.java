@@ -18,10 +18,7 @@ public class PanierForm {
         Panier panier = new Panier();
         Sandwich sandwich = new Sandwich();
         sandwich.setId( this.sandwichId );
-        LinkedList<Sandwich> sandwiches = new LinkedList<>();
-        sandwiches.add(sandwich);
-        panier.setSandwiches(sandwiches);
-        panier.setTotal(panier.getTotal() + sandwich.getPrice() * this.quantity);
+        panier.setQuantity(this.quantity);
         return panier;
     }
 }
